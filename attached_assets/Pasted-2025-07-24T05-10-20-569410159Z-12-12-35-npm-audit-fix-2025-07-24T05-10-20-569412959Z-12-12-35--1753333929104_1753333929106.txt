@@ -1,0 +1,71 @@
+2025-07-24T05:10:20.569410159Z #12 12.35   npm audit fix
+2025-07-24T05:10:20.569412959Z #12 12.35 
+2025-07-24T05:10:20.569417549Z #12 12.35 To address all issues possible (including breaking changes), run:
+2025-07-24T05:10:20.569420489Z #12 12.35   npm audit fix --force
+2025-07-24T05:10:20.569423299Z #12 12.35 
+2025-07-24T05:10:20.569426099Z #12 12.35 Some issues need review, and may require choosing
+2025-07-24T05:10:20.569429019Z #12 12.35 a different dependency.
+2025-07-24T05:10:20.569431759Z #12 12.35 
+2025-07-24T05:10:20.56944366Z #12 12.35 Run `npm audit` for details.
+2025-07-24T05:10:20.719918816Z #12 12.50 npm warn using --force Recommended protections disabled.
+2025-07-24T05:10:26.880810608Z #12 DONE 18.7s
+2025-07-24T05:10:26.880828358Z 
+2025-07-24T05:10:26.880833188Z #13 exporting to docker image format
+2025-07-24T05:10:26.880837488Z #13 exporting layers
+2025-07-24T05:10:43.73434946Z #13 exporting layers 16.8s done
+2025-07-24T05:10:43.734383271Z #13 exporting manifest sha256:74aa4b9219b2a5c3a6b8ccda097b753cd38f31d166b815123573238377e2e529 0.0s done
+2025-07-24T05:10:43.734392101Z #13 exporting config sha256:094a4b6366ee7da9fbdf24825cded4756a923541cebd6292d091a47589c52eda done
+2025-07-24T05:10:47.018708405Z #13 DONE 20.2s
+2025-07-24T05:10:47.018729376Z 
+2025-07-24T05:10:47.018733425Z #14 exporting cache to client directory
+2025-07-24T05:10:47.018736806Z #14 preparing build cache for export
+2025-07-24T05:10:52.869398524Z #14 writing cache manifest sha256:dc478eb4af1e33d6831e4848d65c70ece55d0c7e93e13b13490d7a98c94aab50
+2025-07-24T05:10:53.171149077Z #14 writing cache manifest sha256:dc478eb4af1e33d6831e4848d65c70ece55d0c7e93e13b13490d7a98c94aab50 0.2s done
+2025-07-24T05:10:53.171169378Z #14 DONE 6.0s
+2025-07-24T05:10:54.170224315Z Pushing image to registry...
+2025-07-24T05:11:03.243702074Z Upload succeeded
+2025-07-24T05:11:05.540036346Z ==> Deploying...
+2025-07-24T05:11:26.233245299Z 
+2025-07-24T05:11:26.233299751Z > rest-express@1.0.0 start
+2025-07-24T05:11:26.233305991Z > NODE_ENV=production node dist/index.js
+2025-07-24T05:11:26.233308191Z 
+2025-07-24T05:11:26.73212681Z node:internal/modules/esm/resolve:873
+2025-07-24T05:11:26.732159391Z   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+2025-07-24T05:11:26.732164001Z         ^
+2025-07-24T05:11:26.732167321Z 
+2025-07-24T05:11:26.732171112Z Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+2025-07-24T05:11:26.732178952Z     at packageResolve (node:internal/modules/esm/resolve:873:9)
+2025-07-24T05:11:26.732182292Z     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+2025-07-24T05:11:26.732185582Z     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+2025-07-24T05:11:26.732189032Z     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:642:12)
+2025-07-24T05:11:26.732192112Z     at #cachedDefaultResolve (node:internal/modules/esm/loader:591:25)
+2025-07-24T05:11:26.732195222Z     at ModuleLoader.resolve (node:internal/modules/esm/loader:574:38)
+2025-07-24T05:11:26.732198393Z     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:236:38)
+2025-07-24T05:11:26.732201742Z     at ModuleJob._link (node:internal/modules/esm/module_job:130:49) {
+2025-07-24T05:11:26.732205843Z   code: 'ERR_MODULE_NOT_FOUND'
+2025-07-24T05:11:26.732209543Z }
+2025-07-24T05:11:26.732212583Z 
+2025-07-24T05:11:26.732215403Z Node.js v20.19.4
+2025-07-24T05:11:34.580167258Z ==> Exited with status 1
+2025-07-24T05:11:34.599405155Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-07-24T05:11:35.868393626Z 
+2025-07-24T05:11:35.868442077Z > rest-express@1.0.0 start
+2025-07-24T05:11:35.868447797Z > NODE_ENV=production node dist/index.js
+2025-07-24T05:11:35.868450547Z 
+2025-07-24T05:11:36.274797774Z node:internal/modules/esm/resolve:873
+2025-07-24T05:11:36.274823685Z   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+2025-07-24T05:11:36.274829715Z         ^
+2025-07-24T05:11:36.274832005Z 
+2025-07-24T05:11:36.274835085Z Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /app/dist/index.js
+2025-07-24T05:11:36.274838625Z     at packageResolve (node:internal/modules/esm/resolve:873:9)
+2025-07-24T05:11:36.274841196Z     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+2025-07-24T05:11:36.274843636Z     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+2025-07-24T05:11:36.274845916Z     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:642:12)
+2025-07-24T05:11:36.274848126Z     at #cachedDefaultResolve (node:internal/modules/esm/loader:591:25)
+2025-07-24T05:11:36.274850346Z     at ModuleLoader.resolve (node:internal/modules/esm/loader:574:38)
+2025-07-24T05:11:36.274852546Z     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:236:38)
+2025-07-24T05:11:36.274854876Z     at ModuleJob._link (node:internal/modules/esm/module_job:130:49) {
+2025-07-24T05:11:36.274857766Z   code: 'ERR_MODULE_NOT_FOUND'
+2025-07-24T05:11:36.274860046Z }
+2025-07-24T05:11:36.274862076Z 
+2025-07-24T05:11:36.274864386Z Node.js v20.19.4

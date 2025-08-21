@@ -1,0 +1,41 @@
+2025-07-24T07:24:00.810034456Z ==> Cloning from https://github.com/YashvardhanArora/21JulyFinal
+2025-07-24T07:24:01.588269254Z ==> Checking out commit 8f46c2db32748995847381b1db4fa1f5d1b77c1e in branch main
+2025-07-24T07:24:07.859036587Z ==> Requesting Node.js version 20
+2025-07-24T07:24:08.133716112Z ==> Using Node.js version 20.19.4 via /opt/render/project/src/.node-version
+2025-07-24T07:24:08.159189273Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2025-07-24T07:24:10.035935924Z ==> Using Bun version 1.1.0 (default)
+2025-07-24T07:24:10.035957025Z ==> Docs on specifying a Bun version: https://render.com/docs/bun-version
+2025-07-24T07:24:10.103845333Z ==> Running build command 'npm ci && node build.js'...
+2025-07-24T07:24:18.00928326Z 
+2025-07-24T07:24:18.009310381Z added 472 packages, and audited 473 packages in 8s
+2025-07-24T07:24:18.009322942Z 
+2025-07-24T07:24:18.009327732Z 55 packages are looking for funding
+2025-07-24T07:24:18.009331772Z   run `npm fund` for details
+2025-07-24T07:24:18.013718727Z 
+2025-07-24T07:24:18.013734988Z 11 vulnerabilities (3 low, 7 high, 1 critical)
+2025-07-24T07:24:18.013738178Z 
+2025-07-24T07:24:18.013741928Z To address issues that do not require attention, run:
+2025-07-24T07:24:18.013744818Z   npm audit fix
+2025-07-24T07:24:18.013747448Z 
+2025-07-24T07:24:18.013750818Z To address all issues possible (including breaking changes), run:
+2025-07-24T07:24:18.013754238Z   npm audit fix --force
+2025-07-24T07:24:18.013756868Z 
+2025-07-24T07:24:18.013759689Z Some issues need review, and may require choosing
+2025-07-24T07:24:18.013762498Z a different dependency.
+2025-07-24T07:24:18.013765118Z 
+2025-07-24T07:24:18.013768579Z Run `npm audit` for details.
+2025-07-24T07:24:18.087943672Z 🔧 Building frontend...
+2025-07-24T07:24:22.459743669Z failed to load config from /opt/render/project/src/client/vite.config.js
+2025-07-24T07:24:22.459956444Z error during build:
+2025-07-24T07:24:22.459964545Z Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /opt/render/project/src/node_modules/.vite-temp/vite.config.js.timestamp-1753341862456-bedaa633fa8b6.mjs
+2025-07-24T07:24:22.459968245Z     at packageResolve (node:internal/modules/esm/resolve:873:9)
+2025-07-24T07:24:22.459970965Z     at moduleResolve (node:internal/modules/esm/resolve:946:18)
+2025-07-24T07:24:22.459974445Z     at defaultResolve (node:internal/modules/esm/resolve:1188:11)
+2025-07-24T07:24:22.459977285Z     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:642:12)
+2025-07-24T07:24:22.459979945Z     at #cachedDefaultResolve (node:internal/modules/esm/loader:591:25)
+2025-07-24T07:24:22.459982575Z     at ModuleLoader.resolve (node:internal/modules/esm/loader:574:38)
+2025-07-24T07:24:22.459986565Z     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:236:38)
+2025-07-24T07:24:22.459989256Z     at ModuleJob._link (node:internal/modules/esm/module_job:130:49)
+2025-07-24T07:24:22.495002768Z ❌ Frontend build failed: Command failed: npx vite build --config ./vite.config.js
+2025-07-24T07:24:22.499597288Z ==> Build failed 😞
+2025-07-24T07:24:22.499628169Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

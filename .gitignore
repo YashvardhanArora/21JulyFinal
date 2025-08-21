@@ -1,0 +1,21 @@
+# Node modules
+node_modules
+
+# Build output
+dist
+.vite
+
+# System files
+.DS_Store
+
+# Archives
+*.tar.gz
+
+# Vite config
+vite.config.ts
+
+# Env files
+.env
+
+# Optional: Ignore only if frontend build is stored here
+# server/public

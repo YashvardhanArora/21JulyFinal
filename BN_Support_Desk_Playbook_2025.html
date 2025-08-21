@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BN Support Desk - Complete User Playbook</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #007BFF 0%, #e74c3c 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .toc {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .toc h2 {
+            color: #007BFF;
+            margin-top: 0;
+            border-bottom: 3px solid #007BFF;
+            padding-bottom: 10px;
+        }
+        .toc ol {
+            column-count: 2;
+            column-gap: 30px;
+        }
+        .toc li {
+            margin-bottom: 8px;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .toc li:hover {
+            background-color: #e3f2fd;
+        }
+        .section {
+            margin-bottom: 50px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .section h2 {
+            color: #007BFF;
+            border-bottom: 3px solid #007BFF;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+        .section h3 {
+            color: #495057;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #007BFF;
+        }
+        .feature-card h4 {
+            color: #007BFF;
+            margin-top: 0;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        th {
+            background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .credential-box {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+        .credential-box h4 {
+            margin-top: 0;
+            color: white;
+        }
+        .step-list {
+            counter-reset: step-counter;
+        }
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007BFF;
+            position: relative;
+        }
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: -15px;
+            top: 15px;
+            background: #007BFF;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+            color: #212529;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #fd7e14;
+        }
+        .info-box {
+            background: linear-gradient(135deg, #17a2b8 0%, #6f42c1 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+        .checklist li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .navigation-menu {
+            background: #343a40;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .navigation-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .navigation-menu li {
+            background: #495057;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navigation-menu li:hover {
+            background: #6c757d;
+        }
+        .footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 BN Support Desk</h1>
+            <p>Complete User Playbook & System Guide</p>
+            <p><strong>Version 5.0</strong> | <strong>Last Updated: July 28, 2025</strong></p>
+            <p>🏢 Building Nation - Complaint Management System</p>
+        </div>
+
+        <div class="content">
+            <div class="toc">
+                <h2>📚 Table of Contents</h2>
+                <ol>
+                    <li><a href="#system-overview">🏗️ System Overview</a></li>
+                    <li><a href="#user-roles">👥 User Roles & Access</a></li>
+                    <li><a href="#login-instructions">🔐 Login Instructions</a></li>
+                    <li><a href="#admin-dashboard">🎛️ Admin Dashboard Guide</a></li>
+                    <li><a href="#asm-dashboard">📊 ASM Dashboard Guide</a></li>
+                    <li><a href="#complaint-management">📝 Complaint Management</a></li>
+                    <li><a href="#analytics">📈 Analytics & Reporting</a></li>
+                    <li><a href="#settings">⚙️ Settings & Configuration</a></li>
+                    <li><a href="#regional-mapping">🗺️ Regional Mapping</a></li>
+                    <li><a href="#data-export">📤 Data Export</a></li>
+                    <li><a href="#troubleshooting">🔧 Troubleshooting</a></li>
+                </ol>
+            </div>
+
+            <div class="section" id="system-overview">
+                <h2>🏗️ System Overview</h2>
+                
+                <h3>What is BN Support Desk?</h3>
+                <p>The BN Support Desk is a comprehensive complaint management dashboard built specifically for BN Group India. It provides a centralized, secure platform for tracking, managing, and analyzing customer complaints with real-time updates and detailed analytics across multiple regions.</p>
+
+                <h3>🌟 Key Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🔐 Dual Access System</h4>
+                        <p>Separate Admin and ASM interfaces with role-based permissions for enhanced security and controlled access.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📍 Regional Mapping</h4>
+                        <p>Interactive Leaflet maps for Mathura (UP), Agra (UP), Bhimasar (Gujarat) with geographic complaint distribution visualization.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Real-time Analytics</h4>
+                        <p>Live Recharts visualizations with automatic 30-second refresh for instant insights and trending analysis.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📤 Data Export</h4>
+                        <p>Excel export with 30-column business template structure for comprehensive reporting to stakeholders.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔄 Status Tracking</h4>
+                        <p>Complete complaint lifecycle: New → Processing → Resolved → Closed with end-to-end visibility.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔔 Real-time Notifications</h4>
+                        <p>WebSocket-based instant notifications with sound alerts for immediate awareness of new complaints.</p>
+                    </div>
+                </div>
+
+                <h3>🏢 Business Context</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Aspect</th>
+                                <th>Details</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🌍 Primary Locations</td>
+                                <td>Mathura (UP), Agra (UP), Bhimasar (Gujarat)</td>
+                                <td>Geographic markers with accurate coordinates</td>
+                            </tr>
+                            <tr>
+                                <td>📋 Complaint Categories</td>
+                                <td>Product Quality, Service Issues, Billing Concerns, Delivery Problems</td>
+                                <td>Dynamic dropdown selections</td>
+                            </tr>
+                            <tr>
+                                <td>📊 Data Volume</td>
+                                <td>2024: 114 historical complaints, 2025: 32+ current complaints</td>
+                                <td>Year-wise filtering available</td>
+                            </tr>
+                            <tr>
+                                <td>👥 User Base</td>
+                                <td>1 Master Admin, Multiple ASM users across regions</td>
+                                <td>Role-based access control</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section" id="user-roles">
+                <h2>👥 User Roles & Access</h2>
+                
+                <h3>🔑 Admin Dashboard Access</h3>
+                <div class="credential-box">
+                    <h4>Master Administrator Account</h4>
+                    <p><strong>Username:</strong> temp</p>
+                    <p><strong>Password:</strong> temp</p>
+                    <p><strong>Access Level:</strong> Full System Control</p>
+                </div>
+
+                <h4>Admin Capabilities:</h4>
+                <ul class="checklist">
+                    <li>View all complaints across all regions</li>
+                    <li>Access comprehensive analytics and reports</li>
+                    <li>Manage user profiles and settings</li>
+                    <li>Export data in multiple formats</li>
+                    <li>Create new complaints via admin interface</li>
+                    <li>Change passwords and security settings</li>
+                    <li>Configure system-wide settings</li>
+                </ul>
+
+                <h3>👤 ASM (Area Sales Manager) Access</h3>
+                <div class="credential-box">
+                    <h4>ASM Login Credentials</h4>
+                    <p><strong>Username:</strong> asm | <strong>Password:</strong> 123</p>
+                    <p><strong>Username:</strong> demo | <strong>Password:</strong> demo</p>
+                </div>
+
+                <h4>ASM Capabilities:</h4>
+                <ul class="checklist">
+                    <li>Submit new complaints through dedicated form</li>
+                    <li>View complaint status and progress</li>
+                    <li>Access regional analytics for assigned areas</li>
+                    <li>Track complaint resolution times</li>
+                    <li>Receive real-time notifications</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h4>⚠️ ASM Limitations</h4>
+                    <p>ASM users cannot access admin-level settings or modify other users' data for security purposes.</p>
+                </div>
+            </div>
+
+            <div class="section" id="login-instructions">
+                <h2>🔐 Login Instructions</h2>
+                
+                <h3>🖥️ Admin Login Process</h3>
+                <ol class="step-list">
+                    <li>
+                        <strong>Access the Application</strong><br>
+                        Open Chrome/Firefox/Safari and navigate to your Replit app URL. Wait for BN Group branding to load (2-3 seconds).
+                    </li>
+                    <li>
+                        <strong>Admin Login Interface</strong><br>
+                        You'll see a beautiful blue-to-red gradient background, BN Group logo, "Building Nation" tagline, and a modern login form with glass morphism effect.
+                    </li>
+                    <li>
+                        <strong>Enter Admin Credentials</strong><br>
+                        Username: <code>temp</code>, Password: <code>temp</code>. Click the eye icon to show/hide password.
+                    </li>
+                    <li>
+                        <strong>Dashboard Access</strong><br>
+                        Automatic redirect to admin dashboard with sidebar navigation, analytics loading, and interactive regional map rendering.
+                    </li>
+                </ol>
+
+                <h3>👨‍💼 ASM Login Process</h3>
+                <ol class="step-list">
+                    <li>
+                        <strong>Access ASM Interface</strong><br>
+                        Use the same URL as admin login with professional blue gradient background.
+                    </li>
+                    <li>
+                        <strong>ASM Credentials Entry</strong><br>
+                        Use either: Username: <code>asm</code> Password: <code>123</code> OR Username: <code>demo</code> Password: <code>demo</code>
+                    </li>
+                    <li>
+                        <strong>ASM Dashboard Features</strong><br>
+                        Access complaint submission form, regional statistics, real-time notifications, and mobile-responsive design.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="section" id="admin-dashboard">
+                <h2>🎛️ Admin Dashboard Guide</h2>
+                
+                <h3>📊 Dashboard Overview & Navigation</h3>
+                <div class="navigation-menu">
+                    <h4>Sidebar Navigation Structure:</h4>
+                    <ul>
+                        <li>🏠 Dashboard → Main analytics and overview</li>
+                        <li>📋 All Complaints → Complete complaint management</li>
+                        <li>📈 Analytics → Advanced charts and reports</li>
+                        <li>📝 New Complaint → Admin complaint submission</li>
+                        <li>⚙️ Settings → Profile and system configuration</li>
+                    </ul>
+                </div>
+
+                <h3>Dashboard Main Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>📊 Complaint Statistics Cards</h4>
+                        <ul>
+                            <li>📈 Total Complaints → Complete system count</li>
+                            <li>🆕 Open Complaints → Requires attention count</li>
+                            <li>✅ Resolved Complaints → Successfully handled count</li>
+                            <li>🔒 Closed Complaints → Fully completed count</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🗺️ Regional Distribution Map</h4>
+                        <ul>
+                            <li>📍 Mathura (UP) - Red markers</li>
+                            <li>📍 Agra (UP) - Green markers</li>
+                            <li>📍 Bhimasar (Gujarat) - Purple markers</li>
+                            <li>🔍 Zoom level 8 for optimal view</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>📋 All Complaints Management</h3>
+                <p>The complaint list view includes comprehensive data table columns for complete complaint lifecycle management.</p>
+                
+                <div class="info-box">
+                    <h4>💡 Pro Tip: Advanced Filtering</h4>
+                    <p>Use year toggles (2024 ↔ 2025), status filters, regional filters, priority levels, and complaint types for precise data analysis.</p>
+                </div>
+            </div>
+
+            <div class="section" id="asm-dashboard">
+                <h2>📊 ASM Dashboard Guide</h2>
+                
+                <h3>🏠 ASM Home Interface</h3>
+                <p>The ASM dashboard provides regional statistics cards showing ASM-specific complaint counts, new submissions, pending reviews, and resolution rate tracking.</p>
+
+                <h3>📝 New Complaint Submission</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Section 1: Basic Information</h4>
+                        <ul>
+                            <li>👤 Customer Name (optional)</li>
+                            <li>📧 Email Address (optional)</li>
+                            <li>📞 Contact Number (optional)</li>
+                            <li>🏢 Company/Depot Name (optional)</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Section 2: Complaint Details</h4>
+                        <ul>
+                            <li>📝 Complaint Type: Dropdown selection</li>
+                            <li>📍 Place of Supply: Mathura/Agra/Bhimasar</li>
+                            <li>📅 Date: Calendar picker (no future dates)</li>
+                            <li>📋 Area of Concern: Dropdown with subcategories</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Section 3: Product Information</h4>
+                        <ul>
+                            <li>📦 Product Name: Text input or "Others"</li>
+                            <li>📄 Invoice Number (optional)</li>
+                            <li>📅 Invoice Date (optional)</li>
+                            <li>📋 LR Number (optional)</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Section 4: Transportation Details</h4>
+                        <ul>
+                            <li>🚛 Transporter Name (optional)</li>
+                            <li>📄 Transporter Number (optional)</li>
+                            <li>👤 Salesperson Name (optional)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <h4>✨ Enhanced UX Features</h4>
+                    <p>The form includes modern professional styling with gradients, smooth animations for "Others" field expansion, fully responsive design, real-time validation, auto-save functionality, and progress indicators.</p>
+                </div>
+            </div>
+
+            <div class="section" id="analytics">
+                <h2>📈 Analytics & Reporting</h2>
+                
+                <h3>📊 Dashboard Analytics</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Chart Visualizations</h4>
+                        <ol>
+                            <li>📊 Complaint Status Distribution (Pie Chart)</li>
+                            <li>🌍 Regional Complaints Map (Interactive Leaflet)</li>
+                            <li>📈 Monthly Trends (Line Chart)</li>
+                            <li>🏷️ Priority Distribution (Bar Chart)</li>
+                            <li>⏱️ TAT (Turnaround Time) Analysis</li>
+                            <li>📋 Complaint Type Analysis (Bar Chart)</li>
+                        </ol>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Year-Based Filtering</h4>
+                        <ul>
+                            <li>🔘 2024 Toggle: Historical data (114 complaints)</li>
+                            <li>🔘 2025 Toggle: Current year data (32+ complaints)</li>
+                            <li>🔄 Real-time data refresh every 30 seconds</li>
+                            <li>📊 Instant chart updates on year selection</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>🗺️ Regional Mapping Specifications</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Location</th>
+                                <th>Coordinates</th>
+                                <th>State</th>
+                                <th>Marker Color</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mathura</td>
+                                <td>27.4924°N, 77.6737°E</td>
+                                <td>Uttar Pradesh</td>
+                                <td>Red</td>
+                            </tr>
+                            <tr>
+                                <td>Agra</td>
+                                <td>27.1767°N, 78.0081°E</td>
+                                <td>Uttar Pradesh</td>
+                                <td>Green</td>
+                            </tr>
+                            <tr>
+                                <td>Bhimasar</td>
+                                <td>23.20655°N, 69.70165°E</td>
+                                <td>Gujarat</td>
+                                <td>Purple</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section" id="data-export">
+                <h2>📤 Data Export</h2>
+                
+                <h3>📊 Excel Export Process</h3>
+                <div class="info-box">
+                    <h4>📄 Export Specifications</h4>
+                    <ul>
+                        <li>📋 30-column business template structure</li>
+                        <li>📅 Date range: Full 2024 or 2025 data</li>
+                        <li>📊 Complete metadata inclusion</li>
+                        <li>📍 Geographic coordinates included</li>
+                        <li>💾 File format: .xlsx (Excel 2016+)</li>
+                        <li>📏 Empty fields marked with "-" for consistency</li>
+                    </ul>
+                </div>
+
+                <h3>Export Workflow Steps</h3>
+                <ol class="step-list">
+                    <li>Navigate to "All Complaints" section</li>
+                    <li>Select desired year (2024/2025)</li>
+                    <li>Apply any additional filters if needed</li>
+                    <li>Click "Export All Complaints" button</li>
+                    <li>Wait for data processing (2-5 seconds)</li>
+                    <li>Automatic download begins (.xlsx file)</li>
+                    <li>File saved to browser's default download folder</li>
+                </ol>
+            </div>
+
+            <div class="section" id="troubleshooting">
+                <h2>🔧 Troubleshooting</h2>
+                
+                <h3>🚨 Common Issues & Solutions</h3>
+                
+                <div class="warning-box">
+                    <h4>❌ Login Problems</h4>
+                    <p><strong>Admin login fails:</strong> Verify credentials (temp/temp), check caps lock, browser cookies enabled. Try clearing browser cache.</p>
+                    <p><strong>ASM login not working:</strong> Use correct credentials (asm/123 or demo/demo), username exactly as specified (no email domain). Try different browser or incognito mode.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>⚡ Performance Issues</h4>
+                    <p><strong>Slow dashboard loading:</strong> Check internet connection stability, browser performance tab for bottlenecks. Try refreshing page or restarting browser.</p>
+                    <p><strong>Charts not displaying:</strong> Enable JavaScript in browser, check console for error messages. Try updating browser to latest version.</p>
+                </div>
+
+                <div class="warning-box">
+                    <h4>📊 Data Issues</h4>
+                    <p><strong>Complaints not showing:</strong> Verify year toggle selection (2024/2025), check filter settings aren't too restrictive. Try resetting filters to default.</p>
+                    <p><strong>Export failing:</strong> Disable popup blockers, check browser allows file downloads. Try right-click export button → "Save link as".</p>
+                </div>
+
+                <h3>📞 Support & Contact</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Technical Support</h4>
+                        <p>📧 Email: support@bngroupindia.com</p>
+                        <p>📞 Phone: +91-XXXX-XXXX-XXX</p>
+                        <p>⏰ Support Hours: 9 AM - 6 PM IST</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Emergency Contact</h4>
+                        <p>🚨 Critical Issues: emergency@bngroupindia.com</p>
+                        <p>📱 Emergency Phone: +91-XXXX-XXXX-XXX</p>
+                        <p>⏰ Available: 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Document Information:</strong></p>
+            <p>📝 Document Version: 5.0 | 📅 Last Updated: July 28, 2025</p>
+            <p>👤 Prepared By: BN Group IT Department | 🔄 Next Review Date: August 28, 2025</p>
+            <p><em>This document contains proprietary information of BN Group India. Unauthorized distribution is prohibited.</em></p>
+        </div>
+    </div>
+</body>
+</html>

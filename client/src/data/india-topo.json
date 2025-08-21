@@ -1,0 +1,65 @@
+{
+  "type": "Topology",
+  "arcs": [
+    [[7514, 4006], [7540, 4055], [7566, 4104], [7592, 4153], [7618, 4202], [7644, 4251]],
+    [[7200, 3800], [7300, 3850], [7400, 3900], [7500, 3950], [7600, 4000]],
+    [[6800, 3200], [6900, 3300], [7000, 3400], [7100, 3500], [7200, 3600]]
+  ],
+  "objects": {
+    "states": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Polygon",
+          "properties": {
+            "name": "Uttar Pradesh",
+            "id": "UP",
+            "ISO_A2": "UP"
+          },
+          "arcs": [[0]]
+        },
+        {
+          "type": "Polygon", 
+          "properties": {
+            "name": "Maharashtra",
+            "id": "MH",
+            "ISO_A2": "MH"
+          },
+          "arcs": [[1]]
+        },
+        {
+          "type": "Polygon",
+          "properties": {
+            "name": "Rajasthan", 
+            "id": "RJ",
+            "ISO_A2": "RJ"
+          },
+          "arcs": [[2]]
+        },
+        {
+          "type": "Polygon",
+          "properties": {
+            "name": "Gujarat", 
+            "id": "GJ",
+            "ISO_A2": "GJ"
+          },
+          "arcs": [[2]]
+        },
+        {
+          "type": "Polygon",
+          "properties": {
+            "name": "Karnataka", 
+            "id": "KA",
+            "ISO_A2": "KA"
+          },
+          "arcs": [[1]]
+        }
+      ]
+    }
+  },
+  "bbox": [6800, 3200, 7644, 4251],
+  "transform": {
+    "scale": [0.001, 0.001],
+    "translate": [68, 32]
+  }
+}

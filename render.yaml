@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: complaint-management-system
+    runtime: node
+    plan: free
+    buildCommand: npm ci && node build.js
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
+    autoDeploy: false

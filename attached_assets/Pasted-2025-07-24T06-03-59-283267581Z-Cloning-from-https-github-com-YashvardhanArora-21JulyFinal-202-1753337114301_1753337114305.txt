@@ -1,0 +1,29 @@
+2025-07-24T06:03:59.283267581Z ==> Cloning from https://github.com/YashvardhanArora/21JulyFinal
+2025-07-24T06:03:59.886101543Z ==> Checking out commit f03ce02e5ea7f8fb457c35f6be80af34b24a9e7c in branch main
+2025-07-24T06:04:01.357454863Z ==> Requesting Node.js version 20
+2025-07-24T06:04:01.599533754Z ==> Using Node.js version 20.19.4 via /opt/render/project/src/.node-version
+2025-07-24T06:04:01.625075283Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2025-07-24T06:04:03.343258381Z ==> Using Bun version 1.1.0 (default)
+2025-07-24T06:04:03.343282632Z ==> Docs on specifying a Bun version: https://render.com/docs/bun-version
+2025-07-24T06:04:03.40686422Z ==> Running build command 'npm ci && vite build && node build.js'...
+2025-07-24T06:04:11.140098714Z 
+2025-07-24T06:04:11.140121974Z added 473 packages, and audited 474 packages in 8s
+2025-07-24T06:04:11.140132404Z 
+2025-07-24T06:04:11.140184285Z 55 packages are looking for funding
+2025-07-24T06:04:11.140194916Z   run `npm fund` for details
+2025-07-24T06:04:11.145019114Z 
+2025-07-24T06:04:11.145030334Z 11 vulnerabilities (3 low, 7 high, 1 critical)
+2025-07-24T06:04:11.145033454Z 
+2025-07-24T06:04:11.145036434Z To address issues that do not require attention, run:
+2025-07-24T06:04:11.145039585Z   npm audit fix
+2025-07-24T06:04:11.145042314Z 
+2025-07-24T06:04:11.145045735Z To address all issues possible (including breaking changes), run:
+2025-07-24T06:04:11.145048885Z   npm audit fix --force
+2025-07-24T06:04:11.145051595Z 
+2025-07-24T06:04:11.145054405Z Some issues need review, and may require choosing
+2025-07-24T06:04:11.145057175Z a different dependency.
+2025-07-24T06:04:11.145059865Z 
+2025-07-24T06:04:11.145063065Z Run `npm audit` for details.
+2025-07-24T06:04:11.186544558Z bash: line 1: vite: command not found
+2025-07-24T06:04:11.187066107Z ==> Build failed 😞
+2025-07-24T06:04:11.187086078Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

@@ -1,0 +1,37 @@
+2025-07-24T05:44:51.622464694Z ==> Cloning from https://github.com/YashvardhanArora/21JulyFinal
+2025-07-24T05:44:52.280170511Z ==> Checking out commit 94d44956f2afb9a6d150f20c76fcb39fa2e0b02c in branch main
+2025-07-24T05:44:54.636543241Z ==> Requesting Node.js version 20
+2025-07-24T05:44:54.872928048Z ==> Using Node.js version 20.19.4 via /opt/render/project/src/.node-version
+2025-07-24T05:44:54.899754178Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2025-07-24T05:44:56.559420411Z ==> Using Bun version 1.1.0 (default)
+2025-07-24T05:44:56.559444332Z ==> Docs on specifying a Bun version: https://render.com/docs/bun-version
+2025-07-24T05:44:56.619959193Z ==> Running build command 'npm ci && vite build && node build.js'...
+2025-07-24T05:45:04.642470263Z 
+2025-07-24T05:45:04.642490823Z added 581 packages, and audited 582 packages in 8s
+2025-07-24T05:45:04.642591875Z 
+2025-07-24T05:45:04.642607246Z 67 packages are looking for funding
+2025-07-24T05:45:04.642611356Z   run `npm fund` for details
+2025-07-24T05:45:04.672747284Z 
+2025-07-24T05:45:04.672771454Z 19 vulnerabilities (3 low, 8 moderate, 7 high, 1 critical)
+2025-07-24T05:45:04.672774134Z 
+2025-07-24T05:45:04.672776444Z To address issues that do not require attention, run:
+2025-07-24T05:45:04.672778754Z   npm audit fix
+2025-07-24T05:45:04.672780725Z 
+2025-07-24T05:45:04.672783085Z To address all issues possible (including breaking changes), run:
+2025-07-24T05:45:04.672805655Z   npm audit fix --force
+2025-07-24T05:45:04.672813425Z 
+2025-07-24T05:45:04.672816815Z Some issues need review, and may require choosing
+2025-07-24T05:45:04.672820675Z a different dependency.
+2025-07-24T05:45:04.672823775Z 
+2025-07-24T05:45:04.672827455Z Run `npm audit` for details.
+2025-07-24T05:45:04.871924798Z vite v5.4.19 building for production...
+2025-07-24T05:45:04.909979789Z ✓ 0 modules transformed.
+2025-07-24T05:45:04.911386858Z x Build failed in 9ms
+2025-07-24T05:45:04.911428268Z error during build:
+2025-07-24T05:45:04.911435388Z Could not resolve entry module "index.html".
+2025-07-24T05:45:04.911438439Z     at getRollupError (file:///opt/render/project/src/node_modules/rollup/dist/es/shared/parseAst.js:396:41)
+2025-07-24T05:45:04.911441059Z     at error (file:///opt/render/project/src/node_modules/rollup/dist/es/shared/parseAst.js:392:42)
+2025-07-24T05:45:04.911443979Z     at ModuleLoader.loadEntryModule (file:///opt/render/project/src/node_modules/rollup/dist/es/shared/node-entry.js:20086:20)
+2025-07-24T05:45:04.911446039Z     at async Promise.all (index 0)
+2025-07-24T05:45:04.918855831Z ==> Build failed 😞
+2025-07-24T05:45:04.918876651Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
